@@ -1,4 +1,4 @@
-package com.wsz.demo3;
+package com.wsz.demo4;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -6,16 +6,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.wsz.demo3.service.AccountService;
+import com.wsz.demo4.service.AccountService;
 
 /**
- * 声明式事务：AspectJ
+ * 
  * @author wsz
  * @date 2018年2月27日
  */
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("resource/spring3.xml")
-public class SpringDemo3 {
+@ContextConfiguration("resource/spring4.xml")
+public class SpringDemo4 {
    
 	@Autowired
 	private AccountService accountService;
