@@ -1,4 +1,4 @@
-package com.wsz.spring_transaction.demo1.service;
+package com.wsz.spring_transaction.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -7,7 +7,7 @@ import org.springframework.transaction.support.TransactionCallbackWithoutResult;
 import org.springframework.transaction.support.TransactionTemplate;
 
 import com.wsz.spring_transaction.base.BaseService;
-import com.wsz.spring_transaction.demo1.dao.AccountDao;
+import com.wsz.spring_transaction.dao.AccountDao;
 
 @Service
 public class AccountServiceImpl extends BaseService implements AccountService{

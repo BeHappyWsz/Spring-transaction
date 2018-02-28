@@ -1,4 +1,4 @@
-package com.wsz.spring_transaction.demo2;
+package com.wsz.spring_transaction;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.wsz.spring_transaction.demo1.service.AccountService;
+import com.wsz.spring_transaction.service.AccountService;
 
 /**
  * 
@@ -15,7 +15,7 @@ import com.wsz.spring_transaction.demo1.service.AccountService;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration("resource/spring.xml")
-public class SpringDemo2 {
+public class SpringDemo1 {
    
 	@Autowired
 	private AccountService accountService;

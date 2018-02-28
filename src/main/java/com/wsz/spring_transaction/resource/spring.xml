@@ -22,7 +22,7 @@
 	<!-- c3p0连接池 -->
 	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
 		<property name="driverClass" value="com.mysql.jdbc.Driver" />
-		<property name="jdbcUrl" value="jdbc:mysql://localhost:3306/spring_transaction" />
+		<property name="jdbcUrl" value="jdbc:mysql://106.14.213.251:3306/spring_transaction" />
 		<property name="user" value="wsz" />
 		<property name="password" value="wsz" />
 	</bean>

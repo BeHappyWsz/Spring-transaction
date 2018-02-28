@@ -1,4 +1,4 @@
-package com.wsz.spring_transaction.demo1.service;
+package com.wsz.spring_transaction.service;
 /**
  * 转账案例业务层接口
  * @author wsz
