@@ -27,13 +27,31 @@
 		<property name="password" value="wsz" />
 	</bean>
 	<!-- 自动扫描 -->
-	<context:component-scan base-package="com.wsz.spring_transaction"/>
+	<context:component-scan base-package="com.wsz.demo2"/>
+	
 	<!-- 配置事务管理器 -->
 	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
 		<property name="dataSource" ref="dataSource"></property>
 	</bean>
-	<!-- 配置事务管理模板 -->
-	<bean id="transactionTemplate" class="org.springframework.transaction.support.TransactionTemplate">
+	<bean id="accountService" class="com.wsz.demo2.service.AccountServiceImpl"></bean>
+	<!-- 配置业务层代理类 -->
+	<bean id="accountServiceProxy" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<!-- 目标对象 -->
+		<property name="target" ref="accountService"></property>
+		<!-- 注入事务管理器 -->
 		<property name="transactionManager" ref="transactionManager"></property>
+		<!-- 注入事务属性 -->
+		<property name="transactionAttributes">
+			<props>
+				<!--  
+					PROPAGATION 事务传播行为
+					ISOLATION	事务的隔离级别
+					readOnly	只读
+					-Exception	发生哪些异常回滚事务
+					+Exception	发生哪些异常事务部回滚
+				-->
+				<prop key="transfer">PROPAGATION_REQUIRED</prop>
+			</props>
+		</property>
 	</bean>
 </beans>
