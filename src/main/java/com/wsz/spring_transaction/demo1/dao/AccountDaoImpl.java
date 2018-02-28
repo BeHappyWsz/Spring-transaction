@@ -1,4 +1,4 @@
-package com.wsz.spring_transaction.dao;
+package com.wsz.spring_transaction.demo1.dao;
 
 import javax.sql.DataSource;
 
